@@ -1,0 +1,289 @@
+<html lang="fr">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link href="style.css" rel="stylesheet"> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        .header {
+            width: 100%;
+            position: fixed;
+            z-index: 3000;
+        }
+
+        .a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .spacing {
+            height: 8%;
+        }
+
+        .empty {
+            height: 3%;
+        }
+
+        .row {
+            margin: auto
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .middle {
+            text-align: center;
+        }
+
+        .section {
+            padding-top: 2%;
+            overflow-x: hidden;
+        }
+
+        .image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        body {
+            color: white;
+            background-color: black;
+            font-size: 120%;
+        }
+
+
+        @font-face {
+            font-family: AGaramondPro-Italic;
+            src: url("font/Adobe Garamond Pro/AGaramondPro-Italic.otf");
+        }
+
+        .fdbi {
+            font-family: AGaramondPro-Italic;
+        }
+
+        .titre-section {
+            font-size: 200%;
+        }
+
+        @font-face {
+            font-family: AGaramondPro-Regular;
+            src: url("font/Adobe Garamond Pro/AGaramondPro-Regular.otf");
+        }
+
+        .fdt {
+            font-family: AGaramondPro-Regular;
+
+        }
+
+        @font-face {
+            font-family: AGaramondPro-Bold;
+            src: url("font/Adobe Garamond Pro/AGaramondPro-Bold.otf");
+        }
+
+        .ftb {
+            font-family: AGaramondPro-Bold;
+
+        }
+
+        @font-face {
+            font-family: AGaramondPro-Regular;
+            src: url("font/Adobe Garamond Pro/AGaramondPro-Regular.otf");
+        }
+
+        .ftr {
+            font-family: AGaramondPro-Regular;
+        }
+
+        .texte-section {
+            font-size: 120%;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+    <div class=" header row">
+        <div class="col-4 left">
+            <h5 class="ftr"><a style="color: white; text-decoration: none; cursor: pointer;"
+                    href="pro"><span>Terava Jacquemier</span></a></h5>
+        </div>
+        <div class="col-4 middle">
+            <h5 class="ftr">Information</h5>
+        </div>
+        <div class="col-4 right">
+            <h5 class="ftr"><a style="color: white; text-decoration: none; cursor: pointer;"
+                    href="https://www.instagram.com/teravioli/" target="_blank"><span>Instagram</span></a></h5>
+        </div>
+    </div>
+    <div class="row empty"></div>
+
+    <div class="row">
+        <div class="col-lg-5"></div>
+        <div class="col-lg-3 right">
+            <h1 class="fdbi">Terava Jacquemier</h1>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+
+            <p style="color: grey" class="fdt">
+                Terava Jacquemier<br>Mail. jacquemierterava@gmail.com<br>IG. @teravioli<br>Tél. 06 06 88 29
+                02<br>Paris-Chambéry
+            </p>
+            <br><br>
+            <p class="fdbi">
+                Créative, sérieuse et passionnée, je suis une Graphiste et Illustratrice qui porte un fort intérêt pour
+                la médiation scientifique ainsi que d’un graphisme à la fois sensible et rigoureux.
+            </p>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-lg-4">
+            <p class="fdbi">
+
+                EXPÉRIENCE PROFESSIONNELLE
+
+            </p>
+            <p class="fdbi">
+
+                Février à mai 2021 (4 mois)
+                <br>
+                <span class="ftr">
+                    Stage à PierrePapierStudio à Charleroi en Belgique, dans le cadre de la mobilité internationale
+                </span>
+            </p>
+            <p class="fdbi">
+
+                Février à mars 2020 (1 mois)
+                <br>
+                <span class="ftr">
+
+                    Stage a l’Atelier Chalopin et l’Atelier Coton, Studio de sérigraphie sur papier et textile à Lyon
+                </span>
+            </p>
+            <p class="fdbi">
+
+                Septembre 2019 (1 mois)
+                <br>
+                <span class="ftr">
+
+                    Stage à Éric Linard Édition à La Garde-Adhémar
+                </span>
+            </p>
+            <p class="fdbi">
+
+                Juillet à septembre 2017 à 2022 (2 mois)
+                <br>
+                <span class="ftr">
+
+                    Agent de production en contrat d’intérim dans la société Mafelec à Chimilin
+                </span>
+            </p>
+            <p class="fdbi">
+
+                Avril 2016 (1 semaine)
+                <br>
+                <span class="ftr">
+
+                    Initiation à calligraphie avec l’Association des amis de l’abbaye
+                </span>
+            </p>
+            <p class="fdbi">
+
+                Avril 2015 (1 semaine)
+                <br>
+                <span class="ftr">
+
+                    Cours de dessin de perspective à l’Association art & plastique à Chambéry
+                </span>
+            </p>
+            <br><br>
+        </div>
+
+        <div class="col-lg-4">
+
+            <p class="fdbi">
+
+
+                FORMATION
+
+            </p>
+            <p class="fdbi">
+
+
+                Formation Hygiène et Salubrité (juin 2022)
+
+            </p>
+            <p class="fdbi">
+
+
+                DNSEP (2020-2022)
+                <br>
+                <span class="ftr">
+
+                    Diplôme National Supérieur d’Expression Plastique option design graphique à l’ESAD de valence avec
+                    FÉLICITATION du
+                    jury
+                </span>
+            </p>
+            <p class="fdbi">
+
+
+                DNA (2017-2020)
+                <br>
+                <span class="ftr">
+
+                    Diplôme National d’Art option design graphique à l’ESAD de valence
+                </span>
+
+            </p>
+            <p class="fdbi">
+
+
+                Baccalauréat Littéraire option Art plastique (2017)
+                <br>
+
+                <span class="ftr">
+
+                    Baccalauréat général littéraire option art plastique au lycée du Granier en Savoie
+                </span>
+            </p>
+            <br><br>
+        </div>
+
+        <div class="col-lg-4">
+            <p class="fdbi">
+
+
+                COMPÉTENCE
+
+            </p>
+            <ul class="ftr">
+                <li>Anglais B1</li>
+                <li>Sérigraphie, linogravure, gravure, reliure, Informatique</li>
+                <li>Photoshop, Indesign, Illustrator, Adobe XD, Premiere Pro, After Effect</li>
+                <li>Clip Studio Art, Procreate</li>
+                <li>Word, PowerPoint</li>
+                <li>Des notions en HTML, CSS, JS</li>
+                <li>Permis licence B</li>
+                <li>Tatouage</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
