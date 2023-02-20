@@ -1,0 +1,245 @@
+<html lang="fr">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link href="style.css" rel="stylesheet"> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <style>
+        @font-face {
+            font-family: Faune-Text_Bold;
+            src: url("font/Faune/Faune-Text_Bold.ttf");
+        }
+
+        .ftb {
+            font-family: Faune-Text_Bold;
+
+        }
+
+        body {
+            color: white;
+            background-color: black;
+            line-height: 20px;
+        }
+
+        @font-face {
+            font-family: Faune-TextRegular;
+            src: url("font/Faune/Faune-TextRegular.otf");
+        }
+
+        .ftr {
+            font-family: Faune-TextRegular;
+        }
+
+
+
+        @font-face {
+            font-family: Dauphine-Dings;
+            src: url("font/Dauphine/Dauphine\ Dings.otf");
+        }
+
+        .dd {
+            font-family: Dauphine-Dings;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            body {
+                font-size: 200%;
+                line-height: 125%;
+            }
+
+        }
+
+        body {
+            color: white;
+            background-color: black;
+            font-size: 150%;
+        }
+
+
+        .onlyMdAndLess {
+            display: none;
+        }
+
+        @media screen and (max-width:1000px) {
+            .onlyMdAndLess {
+                display: block;
+                font-size: 35px;
+            }
+        }
+
+        .top,
+        .bottom {
+            position: fixed;
+            left: 0;
+            right: 0;
+            height: 50%;
+        }
+
+        .top {
+            top: 0;
+            /* background-color: orange; */
+        }
+
+        .bottom {
+            bottom: 0;
+            /* background-color: green; */
+        }
+
+        .onlyMdAndMore {
+            display: none;
+        }
+
+        .image {
+            /* border: 1px solid green; */
+            height: 90%;
+            width: 90%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            margin-right: 5%;
+            margin-left: 5%;
+            text-align: center;
+        }
+
+        .texte {
+            /* border: 1px solid orange; */
+            height: 90%;
+            width: 90%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            margin-right: 5%;
+            margin-left: 5%;
+            line-height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (min-width:1000px) {
+            .onlyMdAndMore {
+                display: block;
+            }
+        }
+
+        .left,
+        .right {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+        }
+
+        .left {
+            left: 0;
+            /* background-color: blue; */
+        }
+
+        .right {
+            right: 0;
+            /* background-color: red; */
+        }
+    </style>
+
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+    <!-- <div class="container ">
+
+    <div class="row" style="height: 100vh; display: flex; align-items: center; justify-content: center; margin-left: 5%; margin-right: 5%;">
+
+        <div class="col-lg-6">
+            <div>
+                <img src="images/information/01.png" alt="..." style="filter: invert(100%); text-align: center;">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <p>
+                Créative, sérieuse et passionnée, je suis une designer et illustratrice soucieuse d'un graphisme à la
+                fois sensible et rigoureux.
+            </p>
+            <p>
+                N'hésitez pas à m'écrire pour un projet ou si vous avez des interrogations. Pour plus d'informations.
+                Contactez-moi! :)
+            </p>
+            <p>
+                <bold></p>
+                    <p>Contact :</bold>
+            </p>
+            <p>jacquemierterava@gmail.com</p>
+            <p>0606882902</p>
+            <p>J'habite en région parisienne si jamais vous voulez que l'on se rencontre !</p>
+        </div>
+
+    </div>
+</div>
+     -->
+    <div class="onlyMdAndLess">
+
+        <div class="top">
+            <div class="image" style="display: flex; align-items: center; justify-content: center;">
+                <img src="images/information/01.png" alt="..." style="filter: invert(100%); text-align: center;">
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="texte">
+                <p class="ftr">
+                    Créative, sérieuse et passionnée, je suis une designer et illustratrice soucieuse d'un graphisme à
+                    la
+                    fois sensible et rigoureux.
+                    <br>
+                    N'hésitez pas à m'écrire pour un projet ou si vous avez des interrogations. <br> Pour plus
+                    d'informations.
+                    Contactez-moi! :)
+                    <br><br>
+                    <span class="ftb">Contact :
+                        <br>jacquemierterava@gmail.com<br>0606882902<br>J'habite en région parisienne si jamais vous
+                        voulez que l'on se rencontre !
+                    </span><br><br>                    <span class="dd" style="font-size: 250%;">
+                        G
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="onlyMdAndMore">
+
+        <div class="left">
+            <div class="image" style="display: flex; align-items: center; justify-content: center;">
+                <img src="images/information/01.png" alt="..." style="filter: invert(100%); text-align: center;">
+            </div>
+        </div>
+        <div class="right">
+            <div class="texte">
+                <p class="ftr">
+                    Créative, sérieuse et passionnée, je suis une designer et illustratrice soucieuse d'un graphisme à
+                    la
+                    fois sensible et rigoureux.
+                    <br>
+                    N'hésitez pas à m'écrire pour un projet ou si vous avez des interrogations. <br> Pour plus
+                    d'informations.
+                    Contactez-moi! :)
+                    <br>
+                    <br>
+                    <span class="ftb">
+                        Contact :
+                        <br>jacquemierterava@gmail.com<br>0606882902<br>J'habite en région parisienne si jamais vous
+                        voulez
+                        que l'on se rencontre !
+                    </span><br><br>                    <span class="dd" style="font-size: 250%;">
+                        G
+                    </span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -5,6 +5,44 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- <link href="style.css" rel="stylesheet"> -->
     <style>
+        /* little screen  */
+        @media screen and (max-width: 990px) {
+
+            .incr_mobile {
+                font-size: 50px;
+            }
+            .texte-section{
+                font-size: 35px;
+            }
+
+            .titre-section{
+                font-size: 50px;
+            }
+
+            .date{
+                font-size: 40px;
+            }
+        }
+        /* big screen */
+
+        @media screen and (min-width: 991px) {
+
+            .incr_mobile {
+                font-size: 50px;
+            }
+            .texte-section{
+                font-size: 35px;
+            }
+
+            .titre-section{
+                font-size: 40px;
+            }
+
+            .date{
+                font-size: 40px;
+            }
+        }
+
         .header {
             width: 100%;
             position: fixed;
@@ -21,7 +59,7 @@
         }
 
         .empty {
-            height: 3%;
+            height: 5%;
         }
 
         .row {
@@ -74,9 +112,7 @@
             font-family: Faune-DisplayBoldItalic;
         }
 
-        .titre-section {
-            font-size: 200%;
-        }
+
 
         @font-face {
             font-family: Faune-DisplayThin;
@@ -86,6 +122,20 @@
         .fdt {
             font-family: Faune-DisplayThin;
 
+        }
+
+        @font-face {
+            font-family: Dauphine-Dings;
+            src: url("font/Dauphine/Dauphine\ Dings.otf");
+        }
+
+        .dd {
+            font-family: Dauphine-Dings;
+            font-size: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
 
         @font-face {
@@ -117,14 +167,9 @@
             font-family: Faune-TextRegular;
         }
 
-        .texte-section {
-            font-size: 120%;
-        }
-
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
-            /* 16:9 */
             height: 0;
         }
 
@@ -143,7 +188,8 @@
             animation: fadeInBottom 1.2s both;
             opacity: 0;
         }
-        .container-anim{
+
+        .container-anim {
             opacity: 0;
         }
 
@@ -195,7 +241,6 @@
                 transform: translateX(0);
             }
         }
-
     </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -207,14 +252,14 @@
 <body>
     <div class=" header row">
         <div class="col-4 left">
-            <h5 class="ftr">Terava Jacquemier</h5>
+            <h5 class="ftr incr_mobile">Terava</h5>
         </div>
         <div class="col-4 middle">
-            <h5 class="ftr"><a style="color: white; text-decoration: none; cursor: pointer;"
-                    href="CV_Terava-Jacquemier.pdf"><span>Information</span></a></h5>
+            <h5 class="ftr incr_mobile"><a style="color: white; text-decoration: none; cursor: pointer;"
+                    href="information.html"><span>Information</span></a></h5>
         </div>
         <div class="col-4 right">
-            <h5 class="ftr"><a style="color: white; text-decoration: none; cursor: pointer;"
+            <h5 class="ftr incr_mobile"><a style="color: white; text-decoration: none; cursor: pointer;"
                     href="https://www.instagram.com/teravioli/" target="_blank"><span>Instagram</span></a></h5>
         </div>
     </div>
@@ -224,11 +269,12 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-5"></div>
-        <div class="col-lg-3 right">
-            <h1 class="ftr ">Terava Jacquemier</h1>
+        <div class="col-lg-6"></div>
+        <div class="col-1"></div>
+        <div class="col-lg-5 right">
+            <h1 class="dd">G G G</h1>
         </div>
-        <div class="col-lg-4"></div>
+        <!-- <div class="col-lg-4"></div> -->
     </div>
     <div class="container-anim">
 
@@ -237,7 +283,7 @@
                 <div class="row">
                     <div class="col">
                         <h4 class="fdbi titre-section">
-                            LE DESSIN NATURALISTE, une aventure fabuleuse
+                            LE DESSIN NATURALISTE, <br>une aventure fabuleuse
                         </h4>
                     </div>
                 </div>
@@ -281,7 +327,7 @@
                     </div>
                     <div class="col-lg-1"></div>
                     <div class="col-lg-5">
-                        <h3 class="ftb">
+                        <h3 class="ftb date">
 
                             Janvier 2022
 
@@ -297,7 +343,8 @@
             </div>
         </div>
     </div>
-    <div class="row spacing .d-none .d-md-block"></div>
+    
+    <div class="row spacing .d-none .d-md-block text-center dd" >G G G</div>
 
     <div class="container-anim">
 
@@ -349,7 +396,7 @@
                     </div>
                     <div class="col-lg-1"></div>
                     <div class="col-lg-5">
-                        <h3 class="ftb">
+                        <h3 class="ftb date">
 
                             Juin 2022
 
@@ -376,7 +423,9 @@
         </div>
     </div>
 
-    <div class="row spacing .d-none .d-md-block"></div>
+    <div class="container-anim">
+        <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
     <div class="container-anim">
 
         <div class="row">
@@ -429,7 +478,7 @@
                     </div>
                     <div class="col-lg-1"></div>
                     <div class="col-lg-5">
-                        <h3 class="ftb">
+                        <h3 class="ftb date">
 
                             Janvier 2020
 
@@ -449,7 +498,53 @@
             </div>
         </div>
     </div>
-    <div class="row spacing .d-none .d-md-block"></div>
+    <div class="container-anim">
+        <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
+    <div class="container-anim">
+
+        <div class="row">
+            <div class="section animated">
+                <div class="row">
+                    <div class="col">
+                        <h4 class="fdbi titre-section">
+                            La Grassette
+                        </h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="video-container">
+                            <iframe
+                                src="https://www.youtube.com/embed/unRu6-0bV5A?&controls=0&autoplay=1&mute=1&loop=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=unRu6-0bV5A"
+                                title="01" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-5">
+                        <h3 class="ftb date">
+
+                            Juin 2020
+
+                        </h3>
+                        <h4 class="ftr texte-section">
+                            Prototype de site internet mobile réalisé avec Angular en HTML CSS et TS sur <i>la
+                                Grassette</i>
+                            : une espèce de plante fictive vivant dans la toundra canadienne. Le but de cette
+                            application est de présenter cette plante au travers d'un récit scientifique qui se
+                            divise en trois parties : la découverte, les recherches, l'adoption.
+
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-anim">
+        <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
     <div class="container-anim">
 
         <div class="row">
@@ -498,19 +593,18 @@
                     </div>
                     <div class="col-lg-1"></div>
                     <div class="col-lg-5">
-                        <h3 class="ftb">
+                        <h3 class="ftb date">
 
                             Avril 2021
 
                         </h3>
                         <h4 class="ftr texte-section">
                             Durant la période de l’écriture du mémoire, nous devions en parallèle réfléchir à notre
-                            sujet de
-                            diplôme, dans un premier temps je voulais le diriger vers les insectes, en tentant de
-                            réhabiliter l’image et la réputation que nous avons d’eux. Il devait passer par
-                            l’explication
-                            des avantages que nous avons d’en avoir, mais aussi par l’identification et l’illustration
-                            d’espèces emblématiques afin de redorer leur image.
+                            sujet de diplôme, dans un premier temps je voulais le diriger vers les insectes, en tentant
+                            de réhabiliter l’image et la réputation que nous avons d’eux. Il devait passer par
+                            l’explication des avantages que nous avons d’en avoir, mais aussi par l’identification et
+                            l’illustration d’espèces emblématiques afin de redorer leur image. Dessin numérique avec
+                            l’application Procreate.
 
                         </h4>
                     </div>
@@ -518,7 +612,11 @@
             </div>
         </div>
     </div>
-    <div class="row spacing .d-none .d-md-block"></div>
+
+
+    <div class="container-anim">
+        <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
     <div class="container-anim">
 
         <div class="row">
@@ -526,34 +624,50 @@
                 <div class="row">
                     <div class="col">
                         <h4 class="fdbi titre-section">
-                            La Grassette
+                            Visuels d'arcades
                         </h4>
+
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="video-container">
-                            <iframe
-                                src="https://www.youtube.com/embed/unRu6-0bV5A?&controls=0&autoplay=1&mute=1&loop=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=unRu6-0bV5A"
-                                title="01" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop"
-                                allowfullscreen></iframe>
+                        <div id="Arcadecarroussel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/12-Arcade/01.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/12-Arcade/02.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/12-Arcade/03.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/12-Arcade/04.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#Arcadecarroussel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#Arcadecarroussel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
                     </div>
                     <div class="col-lg-1"></div>
                     <div class="col-lg-5">
-                        <h3 class="ftb">
+                        <h3 class="ftb date">
 
-                            Juin 2020
-
+                            Novembre 2022
                         </h3>
                         <h4 class="ftr texte-section">
-                            Prototype de site internet mobile réalisé avec Angular en HTML CSS et TS sur <i>la
-                                Grassette</i>
-                            : une espèce de plante fictive vivant dans la toundra canadienne. Le but de cette
-                            application est de présenter cette plante au travers d'un récit scientifique qui se
-                            divise en trois parties : la découverte, les recherches, l'adoption.
-
+                            Dans le cadre de mon service civique, j’ai eu la chance avec Laura (ma binôme) de réaliser
+                            deux visuels d’arcades de jeu pour l’Espace Vie Étudiante du Campus Pierre et Marie Curie de
+                            Sorbonne Université.
                         </h4>
                     </div>
                 </div>
@@ -561,41 +675,9 @@
         </div>
     </div>
 
-    <div class="row spacing .d-none .d-md-block"></div>
-    <div class="container-anim">
-
-        <div class="row">
-            <div class="section animated">
-                <div class="row">
-                    <div class="col">
-                        <h4 class="fdbi titre-section">
-                            Whakapapa, Ancêtre
-                        </h4>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <img class="image" src="images/06_moko/moko.jpg" alt="">
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <h3 class="ftb">
-
-                            Janvier 2020
-                        </h3>
-                        <h4 class="ftr texte-section">
-                            <i>Whakapapa, Ancêtre</i> est une édition sur l’histoire du <i>Ta Moko</i>, (le tatouage
-                            maori),
-                            jeu de superposition avec les images et le texte, format A4.
-                        </h4>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- <div class="container-anim">
+        <div class="row spacing .d-none .d-md-block dd">G G G</div>
     </div>
-
-    <div class="row spacing .d-none .d-md-block"></div>
 
     <div class="container-anim">
 
@@ -661,9 +743,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="row spacing .d-none .d-md-block"></div>
+    <div class="container-anim">
+        <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
 
 
     <div class="container-anim">
@@ -703,7 +787,7 @@
                     </div>
                     <div class="col-lg-1"></div>
                     <div class="col-lg-5">
-                        <h3 class="ftb">
+                        <h3 class="ftb date">
 
                             Mai 2021
 
@@ -721,7 +805,10 @@
         </div>
     </div>
 
-    <div class="row spacing .d-none .d-md-block"></div>
+    <div class="container-anim">
+        <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
+
 
     <div class="container-anim">
 
@@ -730,14 +817,130 @@
                 <div class="row">
                     <div class="col">
                         <h4 class="fdbi titre-section">
-                            Logo
+                            Carte Postale Charleroi
                         </h4>
 
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6">
-                        <img class="image" src="images/09_Logo/31-398.jpg" alt="">
+                        <img class="image" src="images/14-Charleroi/01.jpg" alt="">
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-5">
+                        <h3 class="ftb date">
+
+                            Juin 2021
+
+                        </h3>
+                        <h4 class="ftr texte-section">
+                            Cartes postales de Charleroi présentées au festival Papier Carbonne de 2021.  
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-anim">
+        <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
+
+
+
+    <div class="container-anim">
+
+        <div class="row">
+            <div class="section animated">
+                <div class="row">
+                    <div class="col">
+                        <h4 class="fdbi titre-section">
+                            Logo Club Patrimoine
+                        </h4>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div id="patrimoinecarroussel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/13-Kiki/01.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/13-Kiki/02.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/13-Kiki/03.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#patrimoinecarroussel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#patrimoinecarroussel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-5">
+                        <h3 class="ftb date">
+
+                            Janvier 2023
+
+                        </h3>
+                        <h4 class="ftr texte-section">
+                            Réalisation de logo pour l’association Club Patrimoine de l’INSEEC Chambéry.
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-anim">
+        <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
+    <div class="container-anim">
+
+        <div class="row">
+            <div class="section animated">
+                <div class="row">
+                    <div class="col">
+                        <h4 class="fdbi titre-section">
+                            Logo Centrale Nantes
+                        </h4>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div id="centraleNantescarroussel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/09_Logo/2A.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/09_Logo/2B.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/09_Logo/2C.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#centraleNantescarroussel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#centraleNantescarroussel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
                     <div class="col-lg-1"></div>
                     <div class="col-lg-5">
@@ -753,11 +956,103 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container-anim">
+        <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
 
+    <div class="container-anim">
 
-    <div class="row spacing .d-none .d-md-block"></div>
+        <div class="row">
+            <div class="section animated">
+                <div class="row">
+                    <div class="col">
+                        <h4 class="fdbi titre-section">
+                            Logo Jadounails
+                        </h4>
 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img class="image" src="images/15-Jade/01.jpg" alt="">
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-5">
+                        <h3 class="ftb date">
 
+                            Septembre 2019
+
+                        </h3>
+                        <h4 class="ftr texte-section">
+                            Réalisation de logo pour un salon de manucure.  
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-anim">
+        <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
+    <div class="container-anim">
+
+        <div class="row">
+            <div class="section animated">
+                <div class="row">
+                    <div class="col">
+                        <h4 class="fdbi titre-section">
+                            Posters
+                        </h4>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div id="posterscarroussel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/16-posters/01.gif" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/16-posters/02.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/16-posters/03.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#posterscarroussel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#posterscarroussel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-5">
+                        <h3 class="ftb date">
+
+                            Septembre 2021
+
+                        </h3>
+                        <h4 class="ftr texte-section">
+                            Dessin et réalisation de trois posters sur le thème de l'anatomie. Dessins numériques réalisés avec Pro
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-anim">
+        <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
+    <div class="container-anim">
 
         <div class="row">
             <div class="section animated">
@@ -775,7 +1070,7 @@
                     </div>
                     <div class="col-lg-1"></div>
                     <div class="col-lg-5">
-                        <h3 class="ftb">
+                        <h3 class="ftb date">
 
                             Mars 2021
 
@@ -787,9 +1082,10 @@
                 </div>
             </div>
         </div>
-
+    </div>
 
 </body>
 <script type="text/javascript" src="scripts/script.js" defer>
 </script>
+
 </html>
