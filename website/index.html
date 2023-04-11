@@ -1,1146 +1,1548 @@
 <html lang="fr">
-
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <!-- <link href="style.css" rel="stylesheet"> -->
     <style>
-        /* little screen  */
-        @media screen and (max-width: 990px) {
-
-            .incr_mobile {
-                font-size: 50px;
-            }
-
-            .texte-section {
-                font-size: 35px;
-            }
-
-            .titre-section {
-                font-size: 50px;
-            }
-
-            .date {
-                font-size: 40px;
-            }
+      /* little screen  */
+      @media screen and (max-width: 990px) {
+        .incr_mobile {
+          font-size: 50px;
         }
 
-        /* big screen */
-
-        @media screen and (min-width: 991px) {
-
-            .incr_mobile {
-                font-size: 50px;
-            }
-
-            .texte-section {
-                font-size: 35px;
-            }
-
-            .titre-section {
-                font-size: 40px;
-            }
-
-            .date {
-                font-size: 40px;
-            }
+        .texte-section {
+          font-size: 35px;
         }
 
-        .header {
-            width: 100%;
-            position: fixed;
-            z-index: 3000;
+        .titre-section {
+          font-size: 50px;
         }
 
-        .a {
-            color: white;
-            text-decoration: none;
+        .date {
+          font-size: 40px;
+        }
+      }
+
+      /* big screen */
+
+      @media screen and (min-width: 991px) {
+        .incr_mobile {
+          font-size: 50px;
         }
 
-        .spacing {
-            height: 8%;
+        .texte-section {
+          font-size: 35px;
         }
 
-        .empty {
-            height: 5%;
+        .titre-section {
+          font-size: 40px;
         }
 
-        .row {
-            margin: auto
+        .date {
+          font-size: 40px;
+        }
+      }
+
+      .header {
+        width: 100%;
+        position: fixed;
+        z-index: 3000;
+      }
+
+      .a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .spacing {
+        height: 8%;
+      }
+
+      .empty {
+        height: 5%;
+      }
+
+      .row {
+        margin: auto;
+      }
+
+      .left {
+        text-align: left;
+      }
+
+      .right {
+        text-align: right;
+      }
+
+      .middle {
+        text-align: center;
+      }
+
+      .section {
+        position: relative;
+        padding-top: 2%;
+        overflow-x: hidden;
+      }
+
+      .image {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+      }
+
+      body {
+        color: white;
+        background-color: black;
+      }
+
+      @font-face {
+        font-family: Faune-DisplayBlack;
+        src: url("font/Faune/Faune-DisplayBlack.otf");
+      }
+
+      .fdb {
+        font-family: Faune-DisplayBlack;
+      }
+
+      @font-face {
+        font-family: Faune-DisplayBoldItalic;
+        src: url("font/Faune/Faune-DisplayBoldItalic.otf");
+      }
+
+      .fdbi {
+        font-family: Faune-DisplayBoldItalic;
+      }
+
+      @font-face {
+        font-family: Faune-DisplayThin;
+        src: url("font/Faune/Faune-DisplayThin.otf");
+      }
+
+      .fdt {
+        font-family: Faune-DisplayThin;
+      }
+
+      @font-face {
+        font-family: Dauphine-Dings;
+        src: url("font/Dauphine/Dauphine\ Dings.otf");
+      }
+
+      .dd {
+        font-family: Dauphine-Dings;
+        font-size: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      @font-face {
+        font-family: Faune-Text_Bold;
+        src: url("font/Faune/Faune-Text_Bold.ttf");
+      }
+
+      .ftb {
+        font-family: Faune-Text_Bold;
+      }
+
+      @font-face {
+        font-family: Faune-TextItalic;
+        src: url("font/Faune/Faune-TextItalic.otf");
+      }
+
+      .fti {
+        font-family: Faune-TextItalic;
+      }
+
+      @font-face {
+        font-family: Faune-TextRegular;
+        src: url("font/Faune/Faune-TextRegular.otf");
+      }
+
+      .ftr {
+        font-family: Faune-TextRegular;
+      }
+
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .fadeInBottom {
+        -webkit-animation: fadeInBottom 1.2s both;
+        -moz-animation: fadeInBottom 1.2s both;
+        -o-animation: fadeInBottom 1.2s both;
+        animation: fadeInBottom 1.2s both;
+        opacity: 0;
+      }
+
+      .container-anim {
+        opacity: 0;
+      }
+
+      @-webkit-keyframes fadeInBottom {
+        0% {
+          opacity: 0;
+          -webkit-transform: translateY(100px);
         }
 
-        .left {
-            text-align: left;
+        100% {
+          opacity: 1;
+          -webkit-transform: translateX(0);
+        }
+      }
+
+      @-moz-keyframes fadeInBottom {
+        0% {
+          opacity: 0;
+          -moz-transform: translateY(100px);
         }
 
-        .right {
-            text-align: right;
+        100% {
+          opacity: 1;
+          -moz-transform: translateX(0);
+        }
+      }
+
+      @-o-keyframes fadeInBottom {
+        0% {
+          opacity: 0;
+          -o-transform: translateY(100px);
         }
 
-        .middle {
-            text-align: center;
+        100% {
+          opacity: 1;
+          -o-transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeInBottom {
+        0% {
+          opacity: 0;
+          transform: translateY(100px);
         }
 
-        .section {
-            position: relative;
-            padding-top: 2%;
-            overflow-x: hidden;
+        100% {
+          opacity: 1;
+          transform: translateX(0);
         }
-
-        .image {
-            max-width: 100%;
-            height: auto;
-            width: 100%;
-        }
-
-        body {
-            color: white;
-            background-color: black;
-        }
-
-        @font-face {
-            font-family: Faune-DisplayBlack;
-            src: url("font/Faune/Faune-DisplayBlack.otf");
-        }
-
-        .fdb {
-            font-family: Faune-DisplayBlack;
-        }
-
-        @font-face {
-            font-family: Faune-DisplayBoldItalic;
-            src: url("font/Faune/Faune-DisplayBoldItalic.otf");
-        }
-
-        .fdbi {
-            font-family: Faune-DisplayBoldItalic;
-        }
-
-
-
-        @font-face {
-            font-family: Faune-DisplayThin;
-            src: url("font/Faune/Faune-DisplayThin.otf");
-        }
-
-        .fdt {
-            font-family: Faune-DisplayThin;
-
-        }
-
-        @font-face {
-            font-family: Dauphine-Dings;
-            src: url("font/Dauphine/Dauphine\ Dings.otf");
-        }
-
-        .dd {
-            font-family: Dauphine-Dings;
-            font-size: 80px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        @font-face {
-            font-family: Faune-Text_Bold;
-            src: url("font/Faune/Faune-Text_Bold.ttf");
-        }
-
-        .ftb {
-            font-family: Faune-Text_Bold;
-
-        }
-
-        @font-face {
-            font-family: Faune-TextItalic;
-            src: url("font/Faune/Faune-TextItalic.otf");
-        }
-
-        .fti {
-            font-family: Faune-TextItalic;
-
-        }
-
-        @font-face {
-            font-family: Faune-TextRegular;
-            src: url("font/Faune/Faune-TextRegular.otf");
-        }
-
-        .ftr {
-            font-family: Faune-TextRegular;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .fadeInBottom {
-            -webkit-animation: fadeInBottom 1.2s both;
-            -moz-animation: fadeInBottom 1.2s both;
-            -o-animation: fadeInBottom 1.2s both;
-            animation: fadeInBottom 1.2s both;
-            opacity: 0;
-        }
-
-        .container-anim {
-            opacity: 0;
-        }
-
-
-        @-webkit-keyframes fadeInBottom {
-            0% {
-                opacity: 0;
-                -webkit-transform: translateY(100px);
-            }
-
-            100% {
-                opacity: 1;
-                -webkit-transform: translateX(0);
-            }
-        }
-
-        @-moz-keyframes fadeInBottom {
-            0% {
-                opacity: 0;
-                -moz-transform: translateY(100px);
-            }
-
-            100% {
-                opacity: 1;
-                -moz-transform: translateX(0);
-            }
-        }
-
-        @-o-keyframes fadeInBottom {
-            0% {
-                opacity: 0;
-                -o-transform: translateY(100px);
-            }
-
-            100% {
-                opacity: 1;
-                -o-transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInBottom {
-            0% {
-                opacity: 0;
-                transform: translateY(100px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+      }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
-    <link rel="icon" type="image/png" href="images/logo.png">
-</head>
+    <link rel="icon" type="image/png" href="images/logo.png" />
+  </head>
 
-<body>
-    <div class=" header row">
-        <div class="col-4 left">
-            <h5 class="ftr incr_mobile">Terava</h5>
-        </div>
-        <div class="col-4 middle">
-            <h5 class="ftr incr_mobile"><a style="color: white; text-decoration: none; cursor: pointer;"
-                    href="information.html"><span>Information</span></a></h5>
-        </div>
-        <div class="col-4 right">
-            <h5 class="ftr incr_mobile"><a style="color: white; text-decoration: none; cursor: pointer;"
-                    href="https://www.instagram.com/teravioli/" target="_blank"><span>Instagram</span></a></h5>
-        </div>
+  <body>
+    <div class="header row">
+      <div class="col-4 left">
+        <h5 class="ftr incr_mobile">Terava</h5>
+      </div>
+      <div class="col-4 middle">
+        <h5 class="ftr incr_mobile">
+          <a
+            style="color: white; text-decoration: none; cursor: pointer"
+            href="information.html"
+            ><span>Information</span></a
+          >
+        </h5>
+      </div>
+      <div class="col-4 right">
+        <h5 class="ftr incr_mobile">
+          <a
+            style="color: white; text-decoration: none; cursor: pointer"
+            href="https://www.instagram.com/teravioli/"
+            target="_blank"
+            ><span>Instagram</span></a
+          >
+        </h5>
+      </div>
     </div>
 
-    <div class="row empty">
-
-    </div>
+    <div class="row empty"></div>
 
     <div class="row">
-        <div class="col-lg-6"></div>
-        <div class="col-1"></div>
-        <div class="col-lg-5 right">
-            <h1 class="dd">G G G</h1>
-        </div>
-        <!-- <div class="col-lg-4"></div> -->
+      <div class="col-lg-6"></div>
+      <div class="col-1"></div>
+      <div class="col-lg-5 right">
+        <h1 class="dd">G G G</h1>
+      </div>
     </div>
-    <div class="container-anim"><!--Janvier 2023-->
+    <div class="container-anim">
+      <!--Janvier 2023-->
 
-        <div class="row">
-            <div class="section animated">
-                <div class="row">
-                    <div class="col">
-                        <h4 class="fdbi titre-section">
-                            Soleil Vert
-                        </h4>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div id="soleilcaroussel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/18-soleil-vert/1.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/18-soleil-vert/2.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/18-soleil-vert/3.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/18-soleil-vert/4.jpg" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#soleilcaroussel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#soleilcaroussel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <h3 class="ftb date">
-
-                            Mars 2023
-
-                        </h3>
-                        <h4 class="ftr texte-section">
-                            Réinterprétation de l’affiche du film Soleil Vert de Richard Fleischer, sorti en 1974.
-                            Titre imprimé en linogravure 2 couleurs. Affiche A3
-                        </h4>
-                    </div>
-                </div>
+      <div class="row">
+        <div class="section animated">
+          <div class="row">
+            <div class="col">
+              <h4 class="fdbi titre-section">Poster Hibiscus corail</h4>
             </div>
-        </div>
-    </div>
-    <div class="container-anim"><!--spacing-->
-        <div class="row spacing .d-none .d-md-block dd">G G G</div>
-    </div>
-    <div class="container-anim"><!--Janvier 2023-->
-
-        <div class="row">
-            <div class="section animated">
-                <div class="row">
-                    <div class="col">
-                        <h4 class="fdbi titre-section">
-                            La Carte blanche des assos
-                        </h4>
-
-                    </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                id="hibiscuscaroussel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/19-Hibiscus/1.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/19-Hibiscus/2.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/19-Hibiscus/3.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/19-Hibiscus/4.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div id="affichecarroussel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/17-affiches/14-16.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/17-affiches/14-162.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/17-affiches/14-163.jpg" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#affichecarroussel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#affichecarroussel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <h3 class="ftb date">
-
-                            Février 2023
-
-                        </h3>
-                        <h4 class="ftr texte-section">
-                            Dans le cadre de mon service civique, j’ai une la chance de réaliser l’affiche pour un
-                            événement culturel sein de l’Espace Vie Étudiante du Campus Pierre et Marie Curie de
-                            Sorbonne Université.
-                        </h4>
-                    </div>
-                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#hibiscuscaroussel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#hibiscuscaroussel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
-        </div>
-    </div>
-    <div class="container-anim"><!--spacing-->
-        <div class="row spacing .d-none .d-md-block dd">G G G</div>
-    </div>
-    <div class="container-anim"><!--Janvier 2023-->
-
-        <div class="row">
-            <div class="section animated">
-                <div class="row">
-                    <div class="col">
-                        <h4 class="fdbi titre-section">
-                            Logo Club Patrimoine
-                        </h4>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div id="patrimoinecarroussel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/13-Kiki/01.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/13-Kiki/02.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/13-Kiki/03.jpg" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#patrimoinecarroussel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#patrimoinecarroussel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <h3 class="ftb date">
-
-                            Janvier 2023
-
-                        </h3>
-                        <h4 class="ftr texte-section">
-                            Réalisation de logo pour l’association Club Patrimoine de l’INSEEC Chambéry.
-                        </h4>
-                    </div>
-                </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+              <h3 class="ftb date">Mars 2023</h3>
+              <h4 class="ftr texte-section">
+                Dessin et mise en page du poster d'un hibiscus corail, une fleur
+                que l'on peut retrouver sur l'île de Tahiti. Dessin numérique
+              </h4>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="container-anim"><!--spacing-->
-        <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    <div class="container-anim">
+      <!--spacing-->
+      <div class="row spacing .d-none .d-md-block dd">G G G</div>
     </div>
-    <div class="container-anim"><!--Novembre 2022-->
+    <div class="container-anim">
+      <!--Janvier 2023-->
 
-        <div class="row">
-            <div class="section animated">
-                <div class="row">
-                    <div class="col">
-                        <h4 class="fdbi titre-section">
-                            Visuels d'arcades
-                        </h4>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div id="Arcadecarroussel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/12-Arcade/01.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/12-Arcade/02.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/12-Arcade/03.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/12-Arcade/04.jpg" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#Arcadecarroussel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#Arcadecarroussel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <h3 class="ftb date">
-
-                            Novembre 2022
-                        </h3>
-                        <h4 class="ftr texte-section">
-                            Dans le cadre de mon service civique, j’ai eu la chance avec Laura (mon binôme) de réaliser
-                            deux visuels d’arcades de jeu pour l’Espace Vie Étudiante du Campus Pierre et Marie Curie de
-                            Sorbonne Université.
-                        </h4>
-                    </div>
-                </div>
+      <div class="row">
+        <div class="section animated">
+          <div class="row">
+            <div class="col">
+              <h4 class="fdbi titre-section">Soleil Vert</h4>
             </div>
-        </div>
-    </div>
-    <div class="container-anim"><!--spacing-->
-        <div class="row spacing .d-none .d-md-block dd">G G G</div>
-    </div>
-    <div class="container-anim"><!--Juin 2022-->
-        <div class="row">
-            <div class="section animated">
-                <div class="row">
-                    <div class="col">
-                        <h4 class="fdbi titre-section">
-                            Eruption poissonneuse
-                        </h4>
-
-                    </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                id="soleilcaroussel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/18-soleil-vert/1.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/18-soleil-vert/2.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/18-soleil-vert/3.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/18-soleil-vert/4.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div id="poissonCarrousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/02_DNSEP/01.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/02_DNSEP/02.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/02_DNSEP/03.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/02_DNSEP/04.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/02_DNSEP/05.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/02_DNSEP/06.jpg" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#poissonCarrousel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#poissonCarrousel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <h3 class="ftb date">
-
-                            Juin 2022
-
-                        </h3>
-                        <h4 class="ftr texte-section">
-                            Mon projet de diplôme s'engage dans <i>l'illustration</i> et <i>la mise en espace
-                                scénographie</i>
-                            de poissons des profondeurs retrouvés en surface lors de l'éruption volcanique
-                            du Piton de la Fournaise en 2007 (île de La Réunion). Cette mise en espace
-                            scénographique est une ébauche ou un prototype d'exposition pour un musée de
-                            science, exposition temporaire, aquarium exotique... Ce projet, qui s'intitule
-                            <i>Éruption poissonneuse</i>, reflète grandement mon attrait pour les sciences
-                            naturelles, la médiation scientifique et la dualité entre le sensible et
-                            la science. Le but dans ce prototype d'exposition n'est pas de figurer
-                            les poissons de manière précise et scientifiquement correcte mais de
-                            faire découvrir de manière <i>poétique</i> et <i>graphique</i> un
-                            événement peu commun qui s'est déroulé sur l'île de La
-                            Réunion.
-
-                        </h4>
-                    </div>
-                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#soleilcaroussel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#soleilcaroussel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
-        </div>
-    </div>
-    <div class="container-anim"><!--spacing-->
-        <div class="row spacing .d-none .d-md-block dd">G G G</div>
-    </div>
-    <div class="container-anim"><!--Janvier 2022-->
-
-        <div class="row">
-            <div class="section animated">
-                <div class="row">
-                    <div class="col">
-                        <h4 class="fdbi titre-section">
-                            LE DESSIN NATURALISTE, <br>une aventure fabuleuse
-                        </h4>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/01_mémoire/01.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/01_mémoire/02.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/01_mémoire/03.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/01_mémoire/04.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/01_mémoire/05.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/01_mémoire/06.jpg" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <h3 class="ftb date">
-
-                            Janvier 2022
-
-                        </h3>
-                        <h4 class="ftr texte-section">
-                            Mon mémoire est une enquête sur les différents rôles de l'illustration naturaliste, de ses
-                            normes, de ses imprécisions, de sa sensibilité, de sa rigueur... Il est né de mon fort
-                            attrait
-                            pour les anciennes gravures et planches scientifiques. Relié à la main en 10 exemplaires.
-                        </h4>
-                    </div>
-                </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+              <h3 class="ftb date">Mars 2023</h3>
+              <h4 class="ftr texte-section">
+                Réinterprétation de l’affiche du film Soleil Vert de Richard
+                Fleischer, sorti en 1974. Titre imprimé en linogravure 2
+                couleurs. Affiche A3
+              </h4>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="container-anim"><!--spacing-->
-        <div class="row spacing .d-none .d-md-block text-center dd">G G G</div>
+    <div class="container-anim">
+      <!--spacing-->
+      <div class="row spacing .d-none .d-md-block dd">G G G</div>
     </div>
-    <div class="container-anim"><!--Septembre 2021-->
+    <div class="container-anim">
+      <!--Janvier 2023-->
 
-        <div class="row">
-            <div class="section animated">
-                <div class="row">
-                    <div class="col">
-                        <h4 class="fdbi titre-section">
-                            Posters
-                        </h4>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div id="posterscarroussel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/16-posters/01.gif" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/16-posters/02.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/16-posters/03.jpg" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#posterscarroussel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#posterscarroussel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <h3 class="ftb date">
-
-                            Septembre 2021
-
-                        </h3>
-                        <h4 class="ftr texte-section">
-                            Dessin et réalisation de trois posters sur le thème de l'anatomie. Dessins numériques
-                            réalisés avec Procreate.
-                        </h4>
-                    </div>
-                </div>
+      <div class="row">
+        <div class="section animated">
+          <div class="row">
+            <div class="col">
+              <h4 class="fdbi titre-section">La Carte blanche des assos</h4>
             </div>
-        </div>
-    </div>
-    <div class="container-anim"><!--spacing-->
-        <div class="row spacing .d-none .d-md-block dd">G G G</div>
-    </div>
-    <div class="container-anim"><!--Juillet 2021-->
-
-        <div class="row">
-            <div class="section animated">
-                <div class="row">
-                    <div class="col">
-                        <h4 class="fdbi titre-section">
-                            Logo Centrale Nantes
-                        </h4>
-
-                    </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                id="affichecarroussel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/17-affiches/14-16.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/17-affiches/14-162.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/17-affiches/14-163.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div id="centraleNantescarroussel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/09_Logo/2A.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/09_Logo/2B.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/09_Logo/2C.jpg" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#centraleNantescarroussel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#centraleNantescarroussel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <h3 class="ftb">
-
-                            Juillet 2021
-
-                        </h3>
-                        <h4 class="ftr texte-section">
-                            Réalisation de logo pour Centrales Nantes et l’Euro games.
-                        </h4>
-                    </div>
-                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#affichecarroussel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#affichecarroussel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
-        </div>
-    </div>
-    <div class="container-anim"><!--spacing-->
-        <div class="row spacing .d-none .d-md-block dd">G G G</div>
-    </div>
-    <div class="container-anim"><!--Juin 2021-->
-
-        <div class="row">
-            <div class="section animated">
-                <div class="row">
-                    <div class="col">
-                        <h4 class="fdbi titre-section">
-                            Carte Postale Charleroi
-                        </h4>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <img class="image" src="images/14-Charleroi/01.jpg" alt="">
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <h3 class="ftb date">
-
-                            Juin 2021
-
-                        </h3>
-                        <h4 class="ftr texte-section">
-                            Cartes postales de Charleroi présentées au festival Papier Carbonne de 2021.
-                        </h4>
-                    </div>
-                </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+              <h3 class="ftb date">Février 2023</h3>
+              <h4 class="ftr texte-section">
+                Dans le cadre de mon service civique, j’ai une la chance de
+                réaliser l’affiche pour un événement culturel sein de l’Espace
+                Vie Étudiante du Campus Pierre et Marie Curie de Sorbonne
+                Université.
+              </h4>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="container-anim"><!--spacing-->
-        <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    <div class="container-anim">
+      <!--spacing-->
+      <div class="row spacing .d-none .d-md-block dd">G G G</div>
     </div>
-    <div class="container-anim"><!--Mai 2021-->
+    <div class="container-anim">
+      <!--Janvier 2023-->
 
-        <div class="row">
-            <div class="section animated">
-                <div class="row">
-                    <div class="col">
-                        <h4 class="fdbi titre-section">
-                            Risographie folie
-                        </h4>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div id="risocarroussel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/08_riso/01.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/08_riso/02.jpg" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#risocarroussel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#risocarroussel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <h3 class="ftb date">
-
-                            Mai 2021
-
-                        </h3>
-                        <h4 class="ftr texte-section">
-                            Dans le cadre de ma <i>mobilité internationale</i> j’ai eu la chance de produire 2 visuels
-                            réalisés en risographie (A3), le premier <i>4you</i> une illustration qui a été présentée au
-                            festival papier carbone à Charleroi en septembre 2021. La seconde <i>Frititus Plantae</i>
-                            est une illustration sur le thème des frites car j’ai effectué ma mobilité en
-                            Belgique à PierrePapierStudio.
-                        </h4>
-                    </div>
-                </div>
+      <div class="row">
+        <div class="section animated">
+          <div class="row">
+            <div class="col">
+              <h4 class="fdbi titre-section">Logo Club Patrimoine</h4>
             </div>
-        </div>
-    </div>
-    <div class="container-anim"><!--spacing-->
-        <div class="row spacing .d-none .d-md-block dd">G G G</div>
-    </div>
-    <div class="container-anim"> <!--Avril 2021-->
-
-        <div class="row">
-            <div class="section animated">
-                <div class="row">
-                    <div class="col">
-                        <h4 class="fdbi titre-section">
-                            Les insectes
-                        </h4>
-                    </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                id="patrimoinecarroussel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/13-Kiki/01.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/13-Kiki/02.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/13-Kiki/03.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div id="insectescarroussel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/05_insecte/01.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/05_insecte/02.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/05_insecte/03.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/05_insecte/04.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/05_insecte/05.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/05_insecte/06.jpg" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#insectescarroussel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#insectescarroussel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <h3 class="ftb date">
-
-                            Avril 2021
-
-                        </h3>
-                        <h4 class="ftr texte-section">
-                            Durant la période de l’écriture du mémoire, nous devions en parallèle réfléchir à notre
-                            sujet de diplôme, dans un premier temps je voulais le diriger vers les insectes, en tentant
-                            de réhabiliter l’image et la réputation que nous avons d’eux. Il devait passer par
-                            l’explication des avantages que nous avons d’en avoir, mais aussi par l’identification et
-                            l’illustration d’espèces emblématiques afin de redorer leur image. Dessin numérique avec
-                            l’application Procreate.
-
-                        </h4>
-                    </div>
-                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#patrimoinecarroussel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#patrimoinecarroussel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
-        </div>
-    </div>
-    <div class="container-anim"><!--spacing-->
-        <div class="row spacing .d-none .d-md-block dd">G G G</div>
-    </div>
-    <div class="container-anim"><!--Mars 2021-->
-
-        <div class="row">
-            <div class="section animated">
-                <div class="row">
-                    <div class="col">
-                        <h4 class="fdbi titre-section">
-                            Cover
-                        </h4>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <img class="image" src="images/10_Cover/31-399.jpg" alt="">
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <h3 class="ftb date">
-
-                            Mars 2021
-
-                        </h3>
-                        <h4 class="ftr texte-section">
-                            Réalisation de cover d’album, artiste : Rjo 999
-                        </h4>
-                    </div>
-                </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+              <h3 class="ftb date">Janvier 2023</h3>
+              <h4 class="ftr texte-section">
+                Réalisation de logo pour l’association Club Patrimoine de
+                l’INSEEC Chambéry.
+              </h4>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="container-anim"><!--spacing-->
-        <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    <div class="container-anim">
+      <!--spacing-->
+      <div class="row spacing .d-none .d-md-block dd">G G G</div>
     </div>
-    <div class="container-anim"> <!--Juin 2020-->
+    <div class="container-anim">
+      <!--Novembre 2022-->
 
-        <div class="row">
-            <div class="section animated">
-                <div class="row">
-                    <div class="col">
-                        <h4 class="fdbi titre-section">
-                            La Grassette
-                        </h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="video-container">
-                            <iframe
-                                src="https://www.youtube.com/embed/unRu6-0bV5A?&controls=0&autoplay=1&mute=1&loop=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=unRu6-0bV5A"
-                                title="01" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <h3 class="ftb date">
-
-                            Juin 2020
-
-                        </h3>
-                        <h4 class="ftr texte-section">
-                            Prototype de site internet mobile réalisé avec Angular en HTML CSS et TS sur <i>la
-                                Grassette</i>
-                            : une espèce de plante fictive vivant dans la toundra canadienne. Le but de cette
-                            application est de présenter cette plante au travers d'un récit scientifique qui se
-                            divise en trois parties : la découverte, les recherches, l'adoption.
-
-                        </h4>
-                    </div>
-                </div>
+      <div class="row">
+        <div class="section animated">
+          <div class="row">
+            <div class="col">
+              <h4 class="fdbi titre-section">Visuels d'arcades</h4>
             </div>
-        </div>
-    </div>
-    <div class="container-anim"> <!--spacing-->
-        <div class="row spacing .d-none .d-md-block dd">G G G</div>
-    </div>
-    <div class="container-anim"> <!--Janvier 2020-->
-
-        <div class="row">
-            <div class="section animated">
-                <div class="row">
-                    <div class="col">
-
-                        <h4 class="fdbi titre-section">
-                            Mikroserum Plantae
-                        </h4>
-                    </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                id="Arcadecarroussel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/12-Arcade/01.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/12-Arcade/02.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/12-Arcade/03.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/12-Arcade/04.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div id="mikrosereumcarroussel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/03_mikroserum/01.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/03_mikroserum/02.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/03_mikroserum/03.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/03_mikroserum/04.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/03_mikroserum/05.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/03_mikroserum/06.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/03_mikroserum/07.jpg" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#mikrosereumcarroussel"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#mikrosereumcarroussel"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <h3 class="ftb date">
-
-                            Janvier 2020
-
-                        </h3>
-                        <h4 class="ftr texte-section">
-                            Dans une volonté de représenter une nouvelle espèce de plante fictive dans un faux cabinet
-                            de
-                            curiosité, j’ai décidé de créer visuels et objets autour du <i>Mikroserum Plantae</i>, une
-                            famille de plantes qui a la particularité d’être luminescente. Tous les visuels et
-                            objets ont été réalisés avec des encres fluorescentes, réagissant à la lumière noire. Ce
-                            projet fait intervenir différents supports, matérialités et formats (planches
-                            scientifiques, illustrations, objets, sérigraphie…).
-
-                        </h4>
-                    </div>
-                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#Arcadecarroussel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#Arcadecarroussel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
-        </div>
-    </div>
-    <div class="container-anim"> <!--spacing-->
-        <div class="row spacing .d-none .d-md-block dd">G G G</div>
-    </div>
-    <div class="container-anim"><!--Septembre 2019-->
-        <div class="row">
-            <div class="section animated">
-                <div class="row">
-                    <div class="col">
-                        <h4 class="fdbi titre-section">
-                            Logo Jadounails
-                        </h4>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <img class="image" src="images/15-Jade/01.jpg" alt="">
-                    </div>
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <h3 class="ftb date">
-
-                            Septembre 2019
-
-                        </h3>
-                        <h4 class="ftr texte-section">
-                            Réalisation de logo pour un salon de manucure.
-                        </h4>
-                    </div>
-                </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+              <h3 class="ftb date">Novembre 2022</h3>
+              <h4 class="ftr texte-section">
+                Dans le cadre de mon service civique, j’ai eu la chance avec
+                Laura (mon binôme) de réaliser deux visuels d’arcades de jeu
+                pour l’Espace Vie Étudiante du Campus Pierre et Marie Curie de
+                Sorbonne Université.
+              </h4>
             </div>
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="container-anim">
+      <!--spacing-->
+      <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
+    <div class="container-anim">
+      <!--Juin 2022-->
+      <div class="row">
+        <div class="section animated">
+          <div class="row">
+            <div class="col">
+              <h4 class="fdbi titre-section">Eruption poissonneuse</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                id="poissonCarrousel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/02_DNSEP/01.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/02_DNSEP/02.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/02_DNSEP/03.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/02_DNSEP/04.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/02_DNSEP/05.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/02_DNSEP/06.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#poissonCarrousel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#poissonCarrousel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+              <h3 class="ftb date">Juin 2022</h3>
+              <h4 class="ftr texte-section">
+                Mon projet de diplôme s'engage dans <i>l'illustration</i> et
+                <i>la mise en espace scénographie</i>
+                de poissons des profondeurs retrouvés en surface lors de
+                l'éruption volcanique du Piton de la Fournaise en 2007 (île de
+                La Réunion). Cette mise en espace scénographique est une ébauche
+                ou un prototype d'exposition pour un musée de science,
+                exposition temporaire, aquarium exotique... Ce projet, qui
+                s'intitule
+                <i>Éruption poissonneuse</i>, reflète grandement mon attrait
+                pour les sciences naturelles, la médiation scientifique et la
+                dualité entre le sensible et la science. Le but dans ce
+                prototype d'exposition n'est pas de figurer les poissons de
+                manière précise et scientifiquement correcte mais de faire
+                découvrir de manière <i>poétique</i> et <i>graphique</i> un
+                événement peu commun qui s'est déroulé sur l'île de La Réunion.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-anim">
+      <!--spacing-->
+      <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
+    <div class="container-anim">
+      <!--Janvier 2022-->
+
+      <div class="row">
+        <div class="section animated">
+          <div class="row">
+            <div class="col">
+              <h4 class="fdbi titre-section">
+                LE DESSIN NATURALISTE, <br />une aventure fabuleuse
+              </h4>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                id="carouselExampleControls"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/01_mémoire/01.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/01_mémoire/02.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/01_mémoire/03.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/01_mémoire/04.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/01_mémoire/05.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/01_mémoire/06.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleControls"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleControls"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+              <h3 class="ftb date">Janvier 2022</h3>
+              <h4 class="ftr texte-section">
+                Mon mémoire est une enquête sur les différents rôles de
+                l'illustration naturaliste, de ses normes, de ses imprécisions,
+                de sa sensibilité, de sa rigueur... Il est né de mon fort
+                attrait pour les anciennes gravures et planches scientifiques.
+                Relié à la main en 10 exemplaires.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-anim">
+      <!--spacing-->
+      <div class="row spacing .d-none .d-md-block text-center dd">G G G</div>
+    </div>
+    <div class="container-anim">
+      <!--Septembre 2021-->
+
+      <div class="row">
+        <div class="section animated">
+          <div class="row">
+            <div class="col">
+              <h4 class="fdbi titre-section">Posters</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                id="posterscarroussel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/16-posters/01.gif"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/16-posters/02.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/16-posters/03.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#posterscarroussel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#posterscarroussel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+              <h3 class="ftb date">Septembre 2021</h3>
+              <h4 class="ftr texte-section">
+                Dessin et réalisation de trois posters sur le thème de
+                l'anatomie. Dessins numériques réalisés avec Procreate.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-anim">
+      <!--spacing-->
+      <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
+    <div class="container-anim">
+      <!--Juillet 2021-->
+
+      <div class="row">
+        <div class="section animated">
+          <div class="row">
+            <div class="col">
+              <h4 class="fdbi titre-section">Logo Centrale Nantes</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                id="centraleNantescarroussel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/09_Logo/2A.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/09_Logo/2B.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/09_Logo/2C.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#centraleNantescarroussel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#centraleNantescarroussel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+              <h3 class="ftb">Juillet 2021</h3>
+              <h4 class="ftr texte-section">
+                Réalisation de logo pour Centrales Nantes et l’Euro games.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-anim">
+      <!--spacing-->
+      <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
+    <div class="container-anim">
+      <!--Juin 2021-->
+
+      <div class="row">
+        <div class="section animated">
+          <div class="row">
+            <div class="col">
+              <h4 class="fdbi titre-section">Carte Postale Charleroi</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <img class="image" src="images/14-Charleroi/01.jpg" alt="" />
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+              <h3 class="ftb date">Juin 2021</h3>
+              <h4 class="ftr texte-section">
+                Cartes postales de Charleroi présentées au festival Papier
+                Carbonne de 2021.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-anim">
+      <!--spacing-->
+      <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
+    <div class="container-anim">
+      <!--Mai 2021-->
+
+      <div class="row">
+        <div class="section animated">
+          <div class="row">
+            <div class="col">
+              <h4 class="fdbi titre-section">Risographie folie</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                id="risocarroussel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/08_riso/01.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/08_riso/02.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#risocarroussel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#risocarroussel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+              <h3 class="ftb date">Mai 2021</h3>
+              <h4 class="ftr texte-section">
+                Dans le cadre de ma <i>mobilité internationale</i> j’ai eu la
+                chance de produire 2 visuels réalisés en risographie (A3), le
+                premier <i>4you</i> une illustration qui a été présentée au
+                festival papier carbone à Charleroi en septembre 2021. La
+                seconde <i>Frititus Plantae</i>
+                est une illustration sur le thème des frites car j’ai effectué
+                ma mobilité en Belgique à PierrePapierStudio.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-anim">
+      <!--spacing-->
+      <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
+    <div class="container-anim">
+      <!--Avril 2021-->
+
+      <div class="row">
+        <div class="section animated">
+          <div class="row">
+            <div class="col">
+              <h4 class="fdbi titre-section">Les insectes</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                id="insectescarroussel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/05_insecte/01.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/05_insecte/02.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/05_insecte/03.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/05_insecte/04.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/05_insecte/05.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/05_insecte/06.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#insectescarroussel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#insectescarroussel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+              <h3 class="ftb date">Avril 2021</h3>
+              <h4 class="ftr texte-section">
+                Durant la période de l’écriture du mémoire, nous devions en
+                parallèle réfléchir à notre sujet de diplôme, dans un premier
+                temps je voulais le diriger vers les insectes, en tentant de
+                réhabiliter l’image et la réputation que nous avons d’eux. Il
+                devait passer par l’explication des avantages que nous avons
+                d’en avoir, mais aussi par l’identification et l’illustration
+                d’espèces emblématiques afin de redorer leur image. Dessin
+                numérique avec l’application Procreate.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-anim">
+      <!--spacing-->
+      <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
+    <div class="container-anim">
+      <!--Mars 2021-->
+
+      <div class="row">
+        <div class="section animated">
+          <div class="row">
+            <div class="col">
+              <h4 class="fdbi titre-section">Cover</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <img class="image" src="images/10_Cover/31-399.jpg" alt="" />
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+              <h3 class="ftb date">Mars 2021</h3>
+              <h4 class="ftr texte-section">
+                Réalisation de cover d’album, artiste : Rjo 999
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-anim">
+      <!--spacing-->
+      <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
+    <div class="container-anim">
+      <!--Juin 2020-->
+
+      <div class="row">
+        <div class="section animated">
+          <div class="row">
+            <div class="col">
+              <h4 class="fdbi titre-section">La Grassette</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/unRu6-0bV5A?&controls=0&autoplay=1&mute=1&loop=1&rel=0&showinfo=0&color=white&iv_load_policy=3&playlist=unRu6-0bV5A"
+                  title="01"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+              <h3 class="ftb date">Juin 2020</h3>
+              <h4 class="ftr texte-section">
+                Prototype de site internet mobile réalisé avec Angular en HTML
+                CSS et TS sur <i>la Grassette</i>
+                : une espèce de plante fictive vivant dans la toundra
+                canadienne. Le but de cette application est de présenter cette
+                plante au travers d'un récit scientifique qui se divise en trois
+                parties : la découverte, les recherches, l'adoption.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-anim">
+      <!--spacing-->
+      <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
+    <div class="container-anim">
+      <!--Janvier 2020-->
+
+      <div class="row">
+        <div class="section animated">
+          <div class="row">
+            <div class="col">
+              <h4 class="fdbi titre-section">Mikroserum Plantae</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                id="mikrosereumcarroussel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="images/03_mikroserum/01.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/03_mikroserum/02.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/03_mikroserum/03.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/03_mikroserum/04.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/03_mikroserum/05.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/03_mikroserum/06.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="images/03_mikroserum/07.jpg"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#mikrosereumcarroussel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#mikrosereumcarroussel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+              <h3 class="ftb date">Janvier 2020</h3>
+              <h4 class="ftr texte-section">
+                Dans une volonté de représenter une nouvelle espèce de plante
+                fictive dans un faux cabinet de curiosité, j’ai décidé de créer
+                visuels et objets autour du <i>Mikroserum Plantae</i>, une
+                famille de plantes qui a la particularité d’être luminescente.
+                Tous les visuels et objets ont été réalisés avec des encres
+                fluorescentes, réagissant à la lumière noire. Ce projet fait
+                intervenir différents supports, matérialités et formats
+                (planches scientifiques, illustrations, objets, sérigraphie…).
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-anim">
+      <!--spacing-->
+      <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    </div>
+    <div class="container-anim">
+      <!--Septembre 2019-->
+      <div class="row">
+        <div class="section animated">
+          <div class="row">
+            <div class="col">
+              <h4 class="fdbi titre-section">Logo Jadounails</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <img class="image" src="images/15-Jade/01.jpg" alt="" />
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5">
+              <h3 class="ftb date">Septembre 2019</h3>
+              <h4 class="ftr texte-section">
+                Réalisation de logo pour un salon de manucure.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-
-
-
-
-
-
-
-
-    <div class="container-anim"> <!--spacing-->
-        <div class="row spacing .d-none .d-md-block dd">G G G</div>
+    <div class="container-anim">
+      <!--spacing-->
+      <div class="row spacing .d-none .d-md-block dd">G G G</div>
     </div>
-
-
-
-
-
-
-
-
-
-</body>
-<script type="text/javascript" src="scripts/script.js" defer>
-</script>
-
+  </body>
+  <script type="text/javascript" src="scripts/script.js" defer></script>
 </html>
